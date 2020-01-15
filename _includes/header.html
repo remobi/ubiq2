@@ -1,0 +1,22 @@
+<header class="header">
+  <div>
+    <ul class="header-nav-languages">
+      {% assign pages=site.pages | where:"language-ref", page.language-ref | sort: 'language' %}
+      {% for page in pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.language }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <nav>
+    <ul class="header-nav">
+      {% assign pages=site.pages | where:"language", page.language | sort: 'menu-precedence' %}
+      {% for page in pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

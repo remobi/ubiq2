@@ -1,3 +1,26 @@
+Resources used for the site:
+
+Jekyll cheat sheet:
+  * https://learn.cloudcannon.com/jekyll-cheat-sheet/
+
+Mulilingual:
+  * https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/ and inspired from http://chocanto.me/2016/04/16/jekyll-multilingual.html
+  * https://www.sylvaindurand.org/making-jekyll-multilingual/ => incl. SEO
+  * https://simpleit.rocks/ruby/jekyll/tutorials/multilingual-jekyll-without-plugins/ => use defaults to reduce language tags...
+  * Declaring language in HTML, https://www.w3.org/International/questions/qa-html-language-declarations
+  * [not used] https://simpleit.rocks/ruby/jekyll/tutorials/multilingual-jekyll-without-plugins/ , http://www.guido-flohr.net/multilang-with-jekyll/
+
+
+Script for bare / redirection of language directories:
+  * https://github.com/kurtsson/jekyll-multiple-languages-plugin/issues/86
+
+
+Other themes:
+  * https://pages-themes.github.io/minimal/
+
+
+
+
 # The Primer theme
 
 [![Build Status](https://travis-ci.org/pages-themes/primer.svg?branch=master)](https://travis-ci.org/pages-themes/primer) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-primer.svg)](https://badge.fury.io/rb/jekyll-theme-primer)
