@@ -11,7 +11,7 @@ Mulilingual:
   * [not used] https://simpleit.rocks/ruby/jekyll/tutorials/multilingual-jekyll-without-plugins/ , http://www.guido-flohr.net/multilang-with-jekyll/
 
 
-Script for bare / redirection of language directories:
+Script for barre / redirection of language directories:
   * https://github.com/kurtsson/jekyll-multiple-languages-plugin/issues/86
 
 

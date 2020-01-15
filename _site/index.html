@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title> - Ubqtours</title>
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/ubiq2/assets/css/reset.css">
     <link rel="stylesheet" href="/ubiq2/assets/css/main.css">
     <link rel="shortcut icon" type="image/png" href="/ubiq2/assets/img/favicon.png">
 
@@ -14,66 +16,88 @@
     
       <link rel="alternate" hreflang="" href="http://localhost:4000/ubiq2/assets/css/main.css" />
     
+      <link rel="alternate" hreflang="" href="http://localhost:4000/ubiq2/assets/css/reset.css" />
+    
       <link rel="alternate" hreflang="" href="http://localhost:4000/ubiq2/assets/css/style.css" />
     
   </head>
 
   <body>
     <header class="header">
-  <div>
-    <ul class="header-nav-languages">
-      
-      
-        <li>
-          <a href="/ubiq2/"></a>
-        </li>
-      
-        <li>
-          <a href="/ubiq2/assets/css/main.css"></a>
-        </li>
-      
-        <li>
-          <a href="/ubiq2/assets/css/style.css"></a>
-        </li>
-      
-    </ul>
-  </div>
   <nav>
     <ul class="header-nav">
       
       
-        <li>
-          <a href="/ubiq2/"></a>
-        </li>
+        
+          <li class="current-page">
+            <a href="/ubiq2/"></a>
+          </li>
+        
       
-        <li>
-          <a href="/ubiq2/assets/css/main.css"></a>
-        </li>
+        
+          <li><a href="/ubiq2/assets/css/main.css"></a></li>
+        
       
-        <li>
-          <a href="/ubiq2/assets/css/style.css"></a>
-        </li>
+        
+          <li><a href="/ubiq2/assets/css/reset.css"></a></li>
+        
+      
+        
+          <li><a href="/ubiq2/assets/css/style.css"></a></li>
+        
       
     </ul>
   </nav>
+  
+  <div>
+    <ul class="header-nav-languages">
+      
+      
+        
+          <li class="current-language">
+            <a href="/ubiq2/"></a>
+          </li>
+        
+      
+        
+          <li><a href="/ubiq2/assets/css/main.css"></a></li>
+        
+      
+        
+          <li><a href="/ubiq2/assets/css/reset.css"></a></li>
+        
+      
+        
+          <li><a href="/ubiq2/assets/css/style.css"></a></li>
+        
+      
+    </ul>
+  </div>
+
 </header>
 
-    <script>
+<div class="header-logo">
+  <img src="/ubiq2/assets/img/logo.png" alt="Ubqtours">
+</div>
+
+    <div class="content-container">
+      <script>
     var lang = navigator.language || navigator.userLanguage;
     if (lang.indexOf('fr') == 0)
-        window.location = "/ubiq2/fr/";
+        window.location = "http://localhost:4000/ubiq2/fr/";
         // Other languages here
     else
         // Default to English
-        window.location = "/ubiq2/en/";
+        window.location = "http://localhost:4000/ubiq2/en/";
 </script>
 
 
+    </div>
     <div class="footer">
-      Display page language : 
-  <br>1. Site url: http://localhost:4000
-  <br>2. Site baseURL: /ubiq2
-  <br>3. Page URL: /
+  Display page language : 
+  | Site url: http://localhost:4000
+  | Site baseURL: /ubiq2
+  | Page URL: /
 </div>
 
   </body>

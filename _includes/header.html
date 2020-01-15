@@ -1,22 +1,36 @@
 <header class="header">
-  <div>
-    <ul class="header-nav-languages">
-      {% assign pages=site.pages | where:"language-ref", page.language-ref | sort: 'language' %}
-      {% for page in pages %}
-        <li>
-          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.language }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
   <nav>
     <ul class="header-nav">
       {% assign pages=site.pages | where:"language", page.language | sort: 'menu-precedence' %}
-      {% for page in pages %}
-        <li>
-          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-        </li>
+      {% for node in pages %}
+        {% if page.url == node.url %}
+          <li class="current-page">
+            <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+          </li>
+        {% else %}
+          <li><a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   </nav>
+  
+  <div>
+    <ul class="header-nav-languages">
+      {% assign pages=site.pages | where:"language-ref", page.language-ref | sort: 'language' %}
+      {% for node in pages %}
+        {% if page.url == node.url %}
+          <li class="current-language">
+            <a href="{{ site.baseurl }}{{ node.url }}">{{ node.language }}</a>
+          </li>
+        {% else %}
+          <li><a href="{{ site.baseurl }}{{ node.url }}">{{ node.language }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
 </header>
+
+<div class="header-logo">
+  <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="Ubqtours">
+</div>
