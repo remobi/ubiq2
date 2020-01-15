@@ -4,7 +4,7 @@
       {% assign pages=site.pages | where:"language-ref", page.language-ref | sort: 'language' %}
       {% for page in pages %}
         <li>
-          <a href="{{ page.url }}">{{ page.language }}</a>
+          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.language }}</a>
         </li>
       {% endfor %}
     </ul>
@@ -14,7 +14,7 @@
       {% assign pages=site.pages | where:"language", page.language | sort: 'menu-precedence' %}
       {% for page in pages %}
         <li>
-          <a href="{{ page.url }}">{{ page.title }}</a>
+          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
         </li>
       {% endfor %}
     </ul>

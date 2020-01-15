@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     <link rel="shortcut icon" type="image/png" href="{{ "/assets/img/favicon.png" | relative_url }}">
 
-    {% assign pages=site.pages | where:"language-ref", page.language-ref | sort: 'language' %}
+    {% assign pages=site.pages | where:"language-ref", page.language-ref %}
     {% for page in pages %}
-      <link rel="alternate" hreflang="{{ page.language }}" href="{{ page.url }}" />
+      <link rel="alternate" hreflang="{{ page.language }}" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
     {% endfor %}
   </head>
 
