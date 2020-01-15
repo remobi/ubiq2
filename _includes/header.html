@@ -13,7 +13,7 @@
       {% endfor %}
     </ul>
   </nav>
-  
+
   <div>
     <ul class="header-nav-languages">
       {% assign pages=site.pages | where:"language-ref", page.language-ref | sort: 'language' %}
@@ -28,9 +28,4 @@
       {% endfor %}
     </ul>
   </div>
-
 </header>
-
-<div class="header-logo">
-  <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="Ubqtours">
-</div>
