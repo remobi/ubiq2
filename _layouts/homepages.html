@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="header-logo">
+  <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="Ubqtours">
+  UBQTOURS
+</div>
+
+<div class="top-photo">
+  <img src="{{ "/assets/img/home-1-top.jpg" | relative_url }}" alt="Lake">
+</div>
+
+<h1 style="text-align:center;">
+  {{ site.t['homepage_title'][page.language] }}
+</h1>
+
+<div class="columns">
+
+  <div class="col1">
+    {{ content }}
+    <img src="{{ "/assets/img/home-4.jpg" | relative_url }}" alt="Ubqtours">
+
+    <h2 style="text-align:center;padding-top:3vh;">{{ site.t['clients'][page.language] }}</h2>
+    <div class="clients-columns">
+      {% include clients.html %}
+    </div>
+    <p class="clients-step-on">
+      Providing STEP-ON GUIDE and TOUR DIRECTOR services
+      <br>to DMCs andTour Companies since 2010
+    </p>
+  </div>
+
+  <div class="col2">
+    <p class="contact-text">
+      {{ site.t['contact_line_1'][page.language] }}<br>
+      {{ site.t['contact_line_2'][page.language] }}<br>
+      info (at) ubiquitours.ca
+    </p>
+    <img src="{{ "/assets/img/home-2.jpg" | relative_url }}" alt="Sophie guides 1">
+      <br>
+      <br>
+    <img src="{{ "/assets/img/home-3.jpg" | relative_url }}" alt="Sophie guides 2">
+  </div>
+  <hr>
+</div>

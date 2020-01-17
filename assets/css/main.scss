@@ -9,41 +9,47 @@ html {
 }
 body {
   background-color: #593d11;
+  // flex properties:
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; // or height: 100%; ?
 }
-
-/*
 h1 {
-  font-size: 7vw;
-  margin-top: 0;
-}*/
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.3em;
+  padding: 5vh 10px 2vh 10px;
+}
 h2 {
   color: #7cccbf;
   font-size: 1.5rem;
-  line-height: 1.85;
+  line-height: 1.85em;
 }
-/*a {
-  color: #6397b5;
-}*/
+h3 {
+  color: #7cccbf;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.3em;
+}
 p {
   font-size: 1.125rem;
-  line-height: 1.3;
+  line-height: 1.3em;
+  padding-bottom: 1em;
 }
-
 
 .content-container {
-  //background-color: #aaa;
-  //flex-grow: 1;
   color: white;
+  flex-grow: 1;
+  // ?? flex: 1 0 auto;
   font-size: 1.2em;
   left: 50%;
-  position: absolute;
-  top: 6vh;
-  transform: translate(-50%, 3rem);
+  padding-top: 4rem; // height of menu bar
+  padding-bottom: 2rem; // height of footer
+  position: relative;
+  transform: translate(-50%,0);
   width: 80%;
 }
+//.content-container:after { content: "test"; }
 
 /* HEADER STYLES */
 .header {
@@ -51,6 +57,7 @@ p {
       border-bottom: 5px dotted #6ad1c1;
       box-sizing: border-box;
       color: #ab9f8d;
+      flex-grow: 0; // flex
       left: 50%;
       padding: 1rem 1rem;
       position: fixed;
@@ -85,8 +92,6 @@ p {
 .header-nav-languages > li {
   display: inline-block;
   margin-left: 1em;
-  //border: 1px solid;
-  //border-radius: 5px;
 }
 .header-nav-languages a {
   color: #ab9f8d;
@@ -98,19 +103,44 @@ p {
   color: #6ad1c1;
 }
 
+/* FOOTER STYLES */
+.footer {
+  display: none;
+  background-color: #593d11;
+  border-top: 1px dashed #6ad1c1;
+  bottom: 0px;
+  color: #ccc;
+  flex-grow: 0; // flex
+  font-size: 0.8rem;
+  left: 50%;
+  min-height: 1.2rem;
+  //opacity: 50%;
+  padding: 0.2rem 0 0 0;
+  position: fixed;
+  text-align: center;
+  transform: translate(-50%,0);
+  width: 80%;
+  z-index: 20;
+}
+
+/* specific STYLES */
+/* CSS for the default layout {{ content }} */
+
 /* LOGO STYLES */
 
 .header-logo {
-  padding-bottom: 10vh;
+  flex-grow: 0; // flex
+  margin-top: 5vh;
+  padding: 10px 10px;
   position: relative;
   left: 0%;
   top: 0%;
-  /* for brand name: */
+  //for brand name:
   color: white;
   display: inline-block;
   font-family: 'Quattrocento', serif;
   font-size: 3rem;
-  font-weight: bolder;
+  font-weight: 900;
 }
 .header-logo:hover,
 .header-logo:active {
@@ -121,22 +151,118 @@ p {
   max-height: 2rem;
 }
 
-/* FOOTER STYLES */
-.footer {
-  background-color: #593d11;
-  border-top: 2px solid #6ad1c1;
-  bottom: 0px;
-  color: white;
-  font-size: 0.8rem;
-  left: 50%;
-  min-height: 1.2rem;
-  padding: 0.2rem 0 0 0;
-  position: fixed;
-  text-align: center;
-  transform: translate(-50%,0);
-  width: 80%;
-  z-index: 20;
+
+/* the container is .content-container characterized in default.html { flex-grow: 1; } */
+/* the container contains element .header-logo { flex-grow: 0; } */
+.top-photo {
+  //border: 15px double #6ad1c1;
+  flex-grow: 0;
+  margin: 10vh 10px 10px 10px;
 }
 
+.top-photo img {
+  box-sizing: border-box;
+  border: 10px solid #6ad1c1;
+  border-radius: 12px;
+  width: 100%;
+}
 
-/* specific STYLES */
+/* main homepages layouts with 2 columns */
+.columns {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row; // row is default
+  padding-top: 5vh;
+}
+.col1 {
+  flex-basis: 40em; // auto is default
+  flex-grow: 0; // 0 is default
+  flex-shrink: 1; // 1 is default
+  padding: 10px 50px 10px 10px;
+  text-align: justify;
+}
+.col1 img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border: 8px solid white;
+}
+.col2 {
+  flex-basis: 17em; // auto is default
+  flex-grow: 0; // 0 is default
+  flex-shrink: 1; // 1 is default
+  padding: 10px 10px 10px 10px;
+}
+.col2 img {
+  width: 100%;
+  height: auto;
+}
+.contact-text {
+  color: #faed93;
+  line-height: 1.4em;
+  text-align: right;
+  padding-top: 0.175rem;
+}
+
+/* sub layout for hompage > clients in 2 columns */
+.clients-columns {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row; // row is default
+  padding-top: 5vh;
+}
+.clients-col1 {
+  flex-basis: 50%; // auto is default
+  flex-grow: 0; // 0 is default
+  flex-shrink: 1; // 1 is default
+}
+.clients-col2 {
+  flex-basis: 50%; // auto is default
+  flex-grow: 0; // 0 is default
+  flex-shrink: 1; // 1 is default
+  text-align: right;
+}
+.clients-step-on {
+  color: #cf0;
+  font-size: 1.1rem;
+  //font-size: 0.875rem;
+  //font-weight: bold;
+  line-height: 1.85em;
+  text-align: center;
+}
+
+/* ABOUT layouts with 2 columns */
+.columns {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row; // row is default
+  padding-top: 5vh;
+}
+.col3 {
+  flex-basis: 40em; // auto is default
+  flex-grow: 0; // 0 is default
+  flex-shrink: 1; // 1 is default
+  padding: 10px 50px 10px 10px;
+  text-align: justify;
+}
+.col3 img {
+  width: 50%;
+  height: auto;
+  box-sizing: border-box;
+  border: 10px solid white;
+  float: left;
+  margin-right: 2vh;
+  margin-bottom: 2vh;
+}
+.col4 {
+  flex-basis: 20em; // auto is default
+  flex-grow: 0; // 0 is default
+  flex-shrink: 1; // 1 is default
+  padding: 10px 10px 10px 10px;
+}
+.col4 img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border: 10px solid white;
+}

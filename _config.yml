@@ -1,3 +1,17 @@
 url: "https://remobi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/ubiq2" # the subpath of your site, e.g. /blog
 title: "Ubqtours" # the name of your site, e.g. ACME Corp.
+
+t:
+  homepage_title:
+    en: Guided tours in French and English in the Canadian Rockies
+    fr: Tours guidés en Français et en Anglais dans les Rocheuses Canadiennes
+  contact_line_1:
+    en: For more information,
+    fr: Pour plus d'information,
+  contact_line_2:
+    en: "please send an email at:"
+    fr: "envoyez un email à :"
+  clients:
+    en: They trust us
+    fr: Ils nous font confiance
