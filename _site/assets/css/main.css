@@ -61,6 +61,8 @@ p { font-size: 1.125rem; line-height: 1.3em; padding-bottom: 1em; }
 
 .col2 { flex-basis: 17em; flex-grow: 0; flex-shrink: 1; padding: 10px 10px 10px 10px; }
 
+.col2 p { font-size: 1em; }
+
 .col2 img { width: 100%; height: auto; }
 
 .contact-text { color: #faed93; line-height: 1.4em; text-align: right; padding-top: 0.175rem; }
@@ -84,5 +86,36 @@ p { font-size: 1.125rem; line-height: 1.3em; padding-bottom: 1em; }
 .col4 { flex-basis: 20em; flex-grow: 0; flex-shrink: 1; padding: 10px 10px 10px 10px; }
 
 .col4 img { width: 100%; height: auto; box-sizing: border-box; border: 10px solid white; }
+
+/* CSS for MEDIA QUERY smaller screens */
+@media (max-width: 800px) { /* GLOBAL STYLES */
+  h1 { color: white; font-size: 1.5rem; line-height: 1.3em; padding: 5vh 10px 2vh 10px; }
+  h2 { color: #7cccbf; font-size: 1.5rem; line-height: 1.85em; }
+  h3 { color: #7cccbf; font-size: 1.125rem; font-weight: bold; line-height: 1.3em; }
+  .content-container { width: 100%; }
+  /* HEADER STYLES */
+  .header { width: 100%; }
+  /* specific STYLES */
+  /* CSS for the default layout <script> var lang = navigator.language || navigator.userLanguage; if (lang.indexOf('fr') == 0) window.location = "http://localhost:4000/ubiq2/fr/"; // Other languages here else // Default to English window.location = "http://localhost:4000/ubiq2/en/"; </script> */
+  .top-photo img { border: 5px solid #6ad1c1; }
+  /* main homepages layouts with 2 columns */
+  .columns { flex-direction: column; min-width: 100%; }
+  .col1 { padding: 10px 10px 10px 10px; }
+  .col1 img { border: 4px solid white; }
+  .col2 { flex-basis: auto; margin-left: auto; margin-right: auto; padding: 10px 10px 10px 10px; }
+  .col2 p { border-top: 1px solid #777; font-size: 1.2em; padding-top: 4vh; }
+  .col2 img { width: 100%; height: auto; }
+  .contact-text { text-align: center; }
+  /* sub layout for hompage > clients in 2 columns */
+  .clients-columns { flex-direction: column; }
+  .clients-col2 { text-align: left; }
+  /* ABOUT layouts with 2 columns */
+  .columns { flex-direction: column; }
+  .col3 { padding: 10px 10px 10px 10px; }
+  .col3 img { border: 5px solid white; }
+  .col4 { margin-left: auto; margin-right: auto; }
+  .col4 img { border: 6px solid white; } }
+
+@media (max-width: 400px) { .top-photo { display: none; } }
 
 /*# sourceMappingURL=main.css.map */
